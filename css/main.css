@@ -1,6 +1,37 @@
 .container{
-    max-width:1200px;
+    max-width:1215px;
     padding:0 15px;
     margin:0 auto;
 }
 
+.icon-cart{
+    fill:#bb2855;
+    width: 30px;
+    display: inline-block;
+}
+.slider{
+    padding:15px 0 0;
+}
+section{
+    padding:30px 0;
+}
+
+.btn{
+    color: #fff;
+    text-decoration: none;
+    background-color: #bf2957;
+    padding: 13px 13px;
+}
+
+
+
+
+@media(max-width:623px){
+    .container {
+        padding: 0 10px;
+    }
+    .flex_boxes .cat_desc {
+        flex: 0 1 68%;
+        padding: 0 10px 0 0px;
+    }
+}
