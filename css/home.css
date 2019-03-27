@@ -1,0 +1,41 @@
+header{
+    padding: 8px 0 4px;
+    border-bottom: 1px solid #ccc;
+}
+nav{
+    display: flex;
+    width: 100%;
+}
+
+nav div{
+    flex: 0 1 calc(100% - 190px);
+}
+nav ul li{
+    padding-right:20px;
+}
+nav ul li:last-child{
+    padding-right: 0;
+}
+nav .right li:last-child{
+    display: block ;
+}
+.left{
+    padding-left: 133px;
+    padding-top: 52px;
+}
+.right{
+    float: right;
+}
+nav li a{
+    color:#70676a;
+    font-weight:600;
+    text-decoration: none;
+}
+nav .right li:last-child a{
+    display: block;
+    font-size: 20px;
+}
+nav .right li:last-child a img{
+    width: 31px;
+    fill: #f00;
+}
