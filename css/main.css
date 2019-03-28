@@ -121,7 +121,9 @@ nav ul li:last-child{
   .nav > #nav-check {
     display: none;
   }
-  
+  .nav > span > a i span{
+      display: none;
+  }
 
 
 /* footer */
@@ -250,6 +252,7 @@ footer p{
     }
     .nav > span > a > span{display: none;}
     .nav > span > a i span{
+        display: inline-block;
         position: absolute;
         height: 17px;
         width: 17px;
