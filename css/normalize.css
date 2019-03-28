@@ -6,6 +6,9 @@
  *    user zoom.
  */
 
+
+ @import url('https://fonts.googleapis.com/css?family=Abel');
+
  html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -20,6 +23,13 @@
 }
 body ,p {
   margin: 0;
+  font-family: 'Abel', sans-serif;
+}
+
+p{
+  font-size:14px;
+  font-weight: bold;
+  color:#000;
 }
 
 /* HTML5 display definitions
@@ -107,9 +117,32 @@ a {
  */
 
 a:active,
-a:hover {
+a:hover.a:focus ,button:active,
+button:hover,button:focus{
   outline: 0;
+  outline-offset: 0;
 }
+
+
+
+
+/* Change the white to any color ;) */
+.fieldset input:-webkit-autofill,
+.fieldset input:-webkit-autofill:hover, 
+.fieldset input:-webkit-autofill:focus, 
+.fieldset input:-webkit-autofill:active  {
+  background-color: none !important;
+  background-image: none !important;
+  color:inherit !important;
+    -webkit-box-shadow: none !important;
+}
+
+
+/*Change text in autofill textbox*/
+.fieldset input:-webkit-autofill {
+    -webkit-text-fill-color:inherit !important;
+}
+
 
 /* Text-level semantics
    ========================================================================== */
@@ -147,6 +180,15 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin-top: 0;
+}
+
+h2{
+  font-size: 36px;
+    margin-bottom: 20px;
 }
 
 /**
@@ -304,8 +346,9 @@ button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
+  -webkit-appearance: none; /* 2 */
   cursor: pointer; /* 3 */
+  border:0;
 }
 
 /**
@@ -389,11 +432,13 @@ input[type="search"]::-webkit-search-decoration {
  * Define consistent border, margin, and padding.
  */
 
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+ fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
+
+
 
 /**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
