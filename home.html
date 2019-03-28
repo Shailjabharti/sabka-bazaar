@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/home.css">
-    <script src="js/main.js"></script>
+
 </head>
 <body>
    <header>
@@ -53,21 +53,30 @@
    <div class="slider">
        <div class="container">
            <div class="slider_home">
-               <div>
-                   <img src="./image/offers/offer5.jpg" alt="offers">
-               </div>
-               <!-- <div>
+                <div class="mySlides fade">
+                    <img src="./image/offers/offer5.jpg" alt="offers">
+                </div>
+                <div class="mySlides fade">
+                    <img src="./image/offers/offer4.jpg" alt="offers">
+                </div>
+                <div class="mySlides fade">
+                    <img src="./image/offers/offer3.jpg" alt="offers">
+                </div>
+                <div class="mySlides fade">
+                    <img src="./image/offers/offer2.jpg" alt="offers">
+                </div>
+                <div class="mySlides fade">
                     <img src="./image/offers/offer1.jpg" alt="offers">
-               </div>
-               <div>
-                    <img src="./image/offers/offer1.jpg" alt="offers">
-               </div>
-               <div>
-                    <img src="./image/offers/offer1.jpg" alt="offers">
-               </div>
-               <div>
-                    <img src="./image/offers/offer1.jpg" alt="offers">
-               </div> -->
+                </div>
+                <a class="btn_slide prev" onclick="plusSlides(-1)">prev</a>
+                <a class="btn_slide next" onclick="plusSlides(1)">next</a>
+                <div class="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                </div>
            </div>
        </div>
     </div>
@@ -86,7 +95,6 @@
                </div>
            </div>
        </div>
-       
    </section>
    <section>
         <div class="container">
@@ -161,5 +169,7 @@
            <p>Copyright &copy; 2011-2018 Sabka Bazaar Grocery Supplies Pvt Ltd</p>
        </div>
    </footer>
+
+   <script src="js/main.js"></script>
 </body>
 </html>

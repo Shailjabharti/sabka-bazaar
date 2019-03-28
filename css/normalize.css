@@ -6,8 +6,8 @@
  *    user zoom.
  */
 
-
- @import url('https://fonts.googleapis.com/css?family=Abel');
+ 
+ @import url('https://fonts.googleapis.com/css?family=Dosis:400,600,700');
 
  html {
   font-family: sans-serif; /* 1 */
@@ -23,12 +23,12 @@
 }
 body ,p {
   margin: 0;
-  font-family: 'Abel', sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 
 p{
   font-size:14px;
-  font-weight: bold;
+  font-weight: 600;
   color:#000;
 }
 
