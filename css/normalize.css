@@ -123,7 +123,9 @@ button:hover,button:focus{
   outline-offset: 0;
 }
 
-
+a{
+  text-decoration: none;
+}
 
 
 /* Change the white to any color ;) */
