@@ -187,8 +187,9 @@
         flex: 0 1 100%;
         margin:0;
     } */
-    .product_lists > ul li:after{
-        display: none;
+    
+    .product_lists > ul li:nth-child(even){
+        margin-right:0;
     }
 }
 
@@ -209,6 +210,9 @@
     .prod_description .prod_img, .prod_description p {
         display: inline-block;
         float: left;
+    }
+    .product_lists > ul li:after{
+        display: none;
     }
     .buy_now {
         position: relative;
