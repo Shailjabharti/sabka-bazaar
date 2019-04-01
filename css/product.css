@@ -23,6 +23,11 @@
 .product_filter li a:hover{
     color: #000;
 }
+.product_filter input , .product_filter label{
+    display: none;
+}
+
+
 .product_lists {
     width: calc(100% - 300px);
     padding-left: 10px;
@@ -77,16 +82,23 @@
 }
 .buy_now {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-content: end;
-    justify-content: flex-end;
+    -ms-flex-line-pack: end;
+        align-content: end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 .buy_now span {
     font-size: 12px;
     position: absolute;
     color:#010101;
     top:50%;
-    transform:translateY(-50%);
+    -webkit-transform:translateY(-50%);
+        -ms-transform:translateY(-50%);
+            transform:translateY(-50%);
     left:0;
     cursor: default;
     pointer-events: none;
@@ -149,17 +161,24 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
     .prod_description .prod_img ,.prod_description p{
         width:50%;
     }
     .buy_now {
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-content: end; 
-        justify-content: flex-end; 
-        align-self: baseline;
+        -ms-flex-line-pack: end;
+            align-content: end; 
+        -webkit-box-pack: end; 
+            -ms-flex-pack: end; 
+                justify-content: flex-end; 
+        -ms-flex-item-align: baseline; 
+            align-self: baseline;
         display: block;
         width: 100%;
     }
@@ -172,14 +191,18 @@
         color: #fff;
         cursor: pointer;
         pointer-events: inherit;
-        transform: none;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
         top: 0;
     }
     .buy_now span:before{
         content:'@';
         padding-right: 5px;
     }
-  
+    .product_lists > ul li:nth-child(even){
+        margin-right:0;
+    }
 }
 
 @media only screen and (max-width:767px){
@@ -188,22 +211,74 @@
         margin:0;
     } */
     
-    .product_lists > ul li:nth-child(even){
-        margin-right:0;
-    }
-}
-
-@media only screen and (max-width:480px){
+  
     .product_filter {
         max-width: 100%;
+    }
+     .product_filter label {
+        display: block;
+        cursor: pointer;
+        padding: 13px 25px;
+        font-size: 17px;
+        position: relative;
+    }
+    .product_filter label:after {
+        content: '';
+        position: absolute;
+        right: 30px;
+        top: 12px;
+        height: 16px;
+        width: 16px;
+        border-left: 2px solid #fff;
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        border-bottom: 2px solid #fff;
+    }
+    .product_filter {
+        padding-left: 0;
+    }
+    .dropdown-content{
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        list-style-type: none;
+        -webkit-transition: height 0.5s ease-out;
+        -o-transition: height 0.5s ease-out;
+        transition: height 0.5s ease-out;
+      }
+      .product_filter input:checked ~ .dropdown-content{
+        height: 235px;
+        -webkit-transition: height 0.5s ease-in;
+        -o-transition: height 0.5s ease-in;
+        transition: height 0.5s ease-in;
+      }
+    
+    .product_lists > ul li{
+        padding:0 5px 10px;
     }
     .product_lists {
         width: 100%;
         padding-right: 10px;
     }
     .flex_box{
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     }
+}
+
+@media only screen and (max-width:480px){
+   
+    .buy {
+        padding: 10px 13px;
+    }
+    .product_lists > ul li {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 100%;
+                flex: 0 1 100%;
+    }
+   
+  
     .prod_description {
         display: block;
     }
@@ -216,10 +291,16 @@
     }
     .buy_now {
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-content: end;
-        justify-content: flex-end;
-        align-self: baseline;
+        -ms-flex-line-pack: end;
+            align-content: end;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -ms-flex-item-align: baseline;
+            align-self: baseline;
         display: block;
         width: 50%;
         clear: both;
