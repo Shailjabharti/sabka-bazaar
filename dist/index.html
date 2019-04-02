@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Sabka Bazaar //home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+<link href="main.css" rel="stylesheet"></head>
 
 <body class="home">
     <header>
@@ -86,7 +86,7 @@
                     <img src="img/offers/offer1.jpg" alt="offers">
                 </div>
                 <a class="btn_slide prev" onclick="plusSlides(-1)">prev</a>
-                <a class="btn_slide next" id="next" onclick="plusSlides(1)">next</a>
+                <a class="btn_slide next" onclick="plusSlides(1)">next</a>
                 <div class="dots">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
@@ -217,12 +217,7 @@
             dots[slideIndex - 1].className += " active";
         }
 
-        var carousal = document.getElementById("next");
-        setInterval(() => {
-            carousal.click();
-        }, 5000);
-
     </script>
-</body>
+<script type="text/javascript" src="bundle.js"></script></body>
 
 </html>
