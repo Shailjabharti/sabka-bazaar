@@ -197,19 +197,20 @@
       max-width: 100%;
       padding-left: 0;
       margin-top: 30px;
+      margin-bottom: 30px;
       label {
         display: block;
         cursor: pointer;
-        padding: 13px 25px;
+        padding: 13px 15px;
         font-size: 17px;
         position: relative;
         &:after {
           content: "";
           position: absolute;
-          right: 30px;
+          right: 18px;
           top: 12px;
-          height: 16px;
-          width: 16px;
+          height: 14px;
+          width: 14px;
           border-left: 2px solid #fff;
           -webkit-transform: rotate(-45deg);
           -ms-transform: rotate(-45deg);
@@ -239,10 +240,12 @@
     }
     .product_lists {
       width: 100%;
-      padding-right: 10px;
+      padding: 0px;
       & > ul {
         li {
           padding: 0 5px 10px;
+          margin-top: 0;
+          margin-bottom: 30px;
         }
       }
     }
@@ -253,9 +256,9 @@
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 479px) {
   .buy {
-    padding: 10px 13px;
+    padding: 10px 8px;
   }
   .product__List{
 
@@ -265,6 +268,8 @@
           -webkit-box-flex: 0;
           -ms-flex: 0 1 100%;
           flex: 0 1 100%;
+          margin-right: 0;
+         
           &:after {
             display: none;
           }
@@ -278,25 +283,26 @@
           display: inline-block;
           float: left;
         }
+        .buy_now {
+          position: relative;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-line-pack: end;
+          align-content: end;
+          -webkit-box-pack: end;
+          -ms-flex-pack: end;
+          justify-content: flex-end;
+          -ms-flex-item-align: baseline;
+          align-self: baseline;
+          display: block;
+          width: 50%;
+          clear: both;
+          float: right;
+        }
       }
     }  
   }
   
-  .buy_now {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: end;
-    align-content: end;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    -ms-flex-item-align: baseline;
-    align-self: baseline;
-    display: block;
-    width: 50%;
-    clear: both;
-    float: right;
-  }
+  
 }

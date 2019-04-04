@@ -31,11 +31,21 @@ module.exports = {
       filename: 'login.html',
       inject: true
     }),
-   new HtmlWebpackPlugin({  // Also generate a test.html
-    template: path.resolve(__dirname, './src/product.html'),
-    filename: 'product.html',
-    inject: true
-  })
+    new HtmlWebpackPlugin({  // Also generate a test.html
+      template: path.resolve(__dirname, './src/product.html'),
+      filename: 'product.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+      template: path.resolve(__dirname, './src/register.html'),
+      filename: 'register.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({  // Also generate a test.html
+      template: path.resolve(__dirname, './src/cart.html'),
+      filename: 'cart.html',
+      inject: true
+    })
 
   ],
   module: {
